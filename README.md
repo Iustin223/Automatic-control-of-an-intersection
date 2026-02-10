@@ -11,7 +11,7 @@ Traffic access rotates through the intersection in a specific priority order: **
 * Service Mode: Asynchronous input (`service_i`) forces all lights to "Blinking Yellow" (cars) and "Blinking Green" (pedestrians)
 * Custom Timings: Parameterized durations for Green (24s-29s), Yellow (2s), and Pedestrian Walk (12s)
 
-# Simulation Scenarios (Testbench)
+### Simulation Scenarios (Testbench)
 
 The system behavior is verified through the following test cases:
 
@@ -21,17 +21,17 @@ The system behavior is verified through the following test cases:
 
 ### 2. Pedestrian Request
 * **Action:** Button pressed during the Green light phase.
-* [cite_start]**Result:** System waits for the Yellow phase to end, then activates **Pedestrian Green (12s)** + **Blinking (6s)** before switching directions[cite: 101].
+* **Result:** System waits for the Yellow phase to end, then activates **Pedestrian Green (12s)** + **Blinking (6s)** before switching directions[cite: 101].
 
 ### 3. Service/Emergency Mode
 * **Action:** `service_i` set to High.
 * **Result:** Immediate override to **Blinking Mode** regardless of current state. Returns to IDLE when released.
 
-# System Reset
+### System Reset
 * **Action:** `rst_n` (Active Low) applied.
 * **Result:** Instant reset to default Red state.
 
-# Source Files
+### Source Files
 - `semaforConexiuni.v` - Top Module.
 - `logicaControlFSM.v` - Main Priority Controller.
 - `autoSem.v` - Individual Traffic Light Logic.
