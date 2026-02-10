@@ -15,7 +15,7 @@ Traffic access rotates through the intersection in a specific priority order: **
 
 The system behavior is verified through the following test cases:
 
-1. Standard Cycle (No Pedestrians)
+### 1. Standard Cycle (No Pedestrians)
 * **Action:** System runs freely without inputs.
 * **Result:** Cycles S-N-E-V. Pedestrian states are **skipped** for efficiency.
 
